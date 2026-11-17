@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.25)
+project(csvjoin LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 20)
+add_executable(csvjoin main.cpp csv.cpp)
+find_package(SQLite3 REQUIRED)
+target_link_libraries(csvjoin PRIVATE SQLite::SQLite3)
